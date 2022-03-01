@@ -1,7 +1,7 @@
 import random, os
 from pessoa import Pessoa
 
-# TODO:
+# TODO:   (Sublime Merge Test)
 #         [ ] 1) Implementar metódo resetPlayer() e permitir o jogador a conduzir uma novar partida sem ter que 
 #              rodar o programa novamente;
 #         [ ] 2) Limpar o codigo em geral.
