@@ -1,7 +1,7 @@
 import random, os
 from pessoa import Pessoa
 
-# TODO:   
+# TODO:   (Teste commit)
 #         [ ] 1) Limpar o codigo em geral.
 
 def getplayerchoice(jogador, cpu):
