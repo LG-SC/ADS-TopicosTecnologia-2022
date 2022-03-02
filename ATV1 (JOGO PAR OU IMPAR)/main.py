@@ -1,14 +1,12 @@
 import random, os
 from pessoa import Pessoa
 
-# TODO:   (Sublime Merge Test)
-#         [ ] 1) Implementar metódo resetPlayer() e permitir o jogador a conduzir uma novar partida sem ter que 
-#              rodar o programa novamente;
-#         [ ] 2) Limpar o codigo em geral.
+# TODO:   
+#         [ ] 1) Limpar o codigo em geral.
 
 def getplayerchoice(jogador, cpu):
 	choice = 0
-	while choice != 1 and choice != 2:
+	while choice not in [1, 2]:
 		choice = int(input("Você quer PAR ou IMPAR? \n1: IMPAR;\n2: PAR\n>>> "))
 
 		if choice == 1:
@@ -48,6 +46,14 @@ def startgame():
 
 		print(f"PLACAR:\n    Jogador: {jogador.getWins()}\n    CPU: {cpu.getWins()}\n")
 	print("FIM DE JOGO.")
+	retry = 0
+	while retry not in [1, 2]:
+		retry = int(input("Gostaria de tentar novamente?\n1: Sim;\n2:Não\n>>> "))
+	if retry == 1:
+		startgame()
+	else:
+		print("Até mais.")
+
 
 def checkwinner(p1, p2, result):
 	if p1.getWincon() == result:
