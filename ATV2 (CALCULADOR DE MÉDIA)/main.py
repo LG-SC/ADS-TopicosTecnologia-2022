@@ -34,11 +34,9 @@ try:
 
 			if media(EXAME, media(P1, P2)) < 6:
 				# Usando uma exceção com uma mensagem customizada porque no momento não estou afim de restruturar meu código inteiro.
-				raise ReprovadoException("Reprovado.")
+				raise ReprovadoException("NÃO APROVADO")
 
 except ReprovadoException as e:
-	print("Reprovado")
+	print(e)
 else:
-	print("Aprovado.")
-finally:
-	print("Até proximo semestre.")
+	print("APROVADO")
