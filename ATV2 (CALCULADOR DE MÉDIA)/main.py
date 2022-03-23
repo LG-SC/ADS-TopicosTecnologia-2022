@@ -4,6 +4,7 @@
 # 1) Restruturar código e desfazer a solução horrivél do try-catch
 
 
+
 # Spaghetti para fazer meu try-catch pegar apenas um erro customizado.
 class ReprovadoException(Exception):
 	pass
