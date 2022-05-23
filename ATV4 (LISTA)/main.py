@@ -1,3 +1,5 @@
+from typing import List
+
 """
 Uma administradora de condomínios está analisando o consumo de água de seus clientes. 
 Ajude a administradora desenvolvendo um algoritmo que receba a quantidade de moradores (N) de um determinado condomínio, 
@@ -10,7 +12,7 @@ def getConsumoCliente(num_cliente: int) -> int:
     consumo = int(input(f'Qual foi o consumo de água do cliente {num_cliente}?\n>>> '))
     return consumo
 
-def startLeituras(num_leituras: int) -> list[int]:
+def startLeituras(num_leituras: int) -> List[int]:
     """Começe a rotina de leitura de água."""
     leitura_list = []
     for i in range(0, num_leituras):
@@ -18,14 +20,14 @@ def startLeituras(num_leituras: int) -> list[int]:
         leitura_list.append(leitura)
     return leitura_list
 
-def calcMediaLeituras(list_leituras: list[int]) -> float:
+def calcMediaLeituras(list_leituras: List[int]) -> float:
     """Calcule à media de todas as leituras."""
     soma = 0
     for leitura in list_leituras:
         soma += leitura
     return soma / len(list_leituras)
 
-def findLeiturasAltas(list_leituras: list[int], media: int) -> int:
+def findLeiturasAltas(list_leituras: List[int], media: int) -> int:
     """Descubra quantas leituras acima da média existe."""
     leituras_acima = 0
     for leitura in list_leituras:
